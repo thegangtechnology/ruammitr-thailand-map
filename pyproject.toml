@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "ruammitr_mapping"
+version = "0.1.0"
+description = ""
+authors = ["The Gang Technology"]
+packages = [{ include = "ruammitr_mapping", from = "src" }]
+include = ["README.md"]
+exclude = [
+    "Dockerfile",
+    ".envrc",
+    ".pypirc",
+    ".dockerignore",
+    ".gitignore",
+    ".gitlab-ci.yml",
+    "notebooks/*",
+    "sample/*",
+    "assets/*",
+    ".venv/*"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+numpy = "^1.23.1"
+pandas = "^1.4.3"
+jupyter = "^1.1.1"
+geojson = "^3.1.0"
+plotly = "^5.24.0"
+ipywidgets = "^8.1.5"
+geopandas = "^1.0.1"
+matplotlib = "^3.9.2"
+openpyxl = "^3.1.5"
+geoplot = "^0.5.1"
+
+[tool.poetry.group.dev.dependencies]
+coverage = "^7.2.7"
+pre-commit = "^2.20.0"
+flake8 = "^6.1.0"
+black = "^23.10.1"
+pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
+ipykernel = "^6.23.1"
+autopep8 = "^1.7.0"
+isort = "^5.12.0"
+notebook = "6.5.6"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
